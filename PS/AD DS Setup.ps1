@@ -34,7 +34,7 @@ Install-ADDSForest `
 #Get-ADDomainController
 #Get-ADDomain dmit2023.local
 
-## LOCAL COMPUTER Running something else
+## LOCAL COMPUTER Running something else #### Testing..
 workflow test-restart {
     param ([string]$Name)
     Write-Output "Before reboot" | Out-File  C:\Users\Administrator\Desktop\Log.txt -Append -ErrorAction Ignore
