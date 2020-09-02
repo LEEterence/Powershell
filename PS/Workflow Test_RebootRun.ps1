@@ -30,7 +30,7 @@ workflow Rename-And-Reboot {
 #>
 
 
-## LOCAL PC
+## LOCAL PC #### v2
 
 workflow test-restart {
     param ([string]$Name)
@@ -55,3 +55,24 @@ Set-ScheduledTask -TaskName ResumeJob -Action $Action -Trigger $Trigger -Setting
 
 ## Comment out to run manually or take out comment to run right away 
 #test-restart -AsJob 
+
+
+# Initial Code ######
+
+
+<# workflow test-restart {
+    Write-Output "Before reboot" | Out-File  C:/Log/t.txt -Append
+    Restart-Computer -Wait
+    Write-Output "$Now2 After reboot" | Out-File  C:/Log/t.txt -Append
+}
+
+$PSPath = "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
+$Args = '-NonInteractive -WindowStyle Hidden -NoLogo -NoProfile -NoExit -Command "& {Import-Module PSWorkflow ; Get-Job | Resume-Job}"'
+$Action = New-ScheduledTaskAction -Execute $PSPath -Argument $Args
+$Option = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -WakeToRun
+$Trigger = New-JobTrigger -AtStartUp -RandomDelay (New-TimeSpan -Minutes 5)
+Register-ScheduledTask -TaskName ResumeJob -Action $Action -Trigger $Trigger -Settings $Option -RunLevel Highest
+
+
+test-restart -AsJob #>
+
