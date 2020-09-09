@@ -1,0 +1,18 @@
+# Used to perform additional changes to a system image 
+
+Step 1: Mount the iso for the image to use (ie. Windows 10 Enterprise)
+Step 2: Navigate to sources\install.wim
+Step 3: Create a "wim" folder in my WDS-specific drive and copy and paste install.wim to it
+    - I will NOT be able to add the install.wim file to WSIM if it is still located within the iso
+Step 4: add file to WSIM "Windows Image" section and create a catalogue file
+    - NOTE: MUST USE ADK 1809 OTHERWISE WILL FAIL TO CREATE CATALOGUE FOR X64 MACHINES
+Step 5: create a new Answer file or open an existing
+Step 6: If new, add the following components from the Windows 
+    Partition/Login/SetupUILanguage/SystemPartitionInstall:
+        - Go to WinPE
+        imageAmd64_Microsoft-Windows-International-Core-WinPE... 
+        Amd64_Microsoft-Windows-Setup_... 
+    UserAccounts/WindowsFeatures/LogonCommands:
+        - go to oobesystem => UserAccounts
+        Microsoft-Windows-Shell-Setup
+        - note: to specify local/domain account password - select plus symbol 

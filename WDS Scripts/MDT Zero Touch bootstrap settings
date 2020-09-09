@@ -1,0 +1,9 @@
+[Settings]
+Priority=Default
+
+[Default]
+DeployRoot=\\WDS01\DeploymentShare$
+UserDomain=terence.local
+UserID=administrator
+UserPassword=Password1
+SkipBDDWelcome=YES

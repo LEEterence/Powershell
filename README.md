@@ -7,4 +7,5 @@ Server Types (WIP)
  - DCs
  - DHCP
  - WDS 
+ - Hyper-V
 

@@ -1,0 +1,43 @@
+{
+"extensions.autoUpdate": true,
+"files.defaultLanguage": "powershell",
+"powershell.scriptAnalysis.enable": true,
+"powershell.startAutomatically": true,
+"powershell.integratedConsole.focusConsoleOnExecute": false,
+"powershell.enableProfileLoading": true,
+"powershell.developer.editorServicesLogLevel": "Verbose",
+"editor.formatOnSave": true,
+"editor.minimap.enabled": false,
+"editor.mouseWheelZoom": true,
+"editor.tabCompletion": "on",
+"editor.suggestSelection": "first",
+"terminal.integrated.shell.windows": "C:\\WINDOWS\\Sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
+"terminal.integrated.rightClickBehavior": "default",
+"window.title": "${activeEditorLong}",
+"powershell.powerShellExePath": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+"powershell.scriptAnalysis.settingsPath": "ScriptAnalyzerSettings.psd1",
+"workbench.startupEditor": "newUntitledFile",
+"editor.cursorStyle": "line-thin",
+"shellLauncher.shells.windows": [
+    {
+        "shell": "C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "label": "PowerShell 5.1"
+    },
+    {
+        "shell": "C:\\Program Files\\PowerShell\\6\\pwsh.exe",
+        "label": "PowerShell 6.0"
+    },
+    {
+        "shell": "C:\\Windows\\System32\\cmd.exe",
+        "label": "cmd"
+    },
+    {
+        "shell": "C:\\Program Files\\Git\\bin\\bash.exe",
+        "label": "Git bash"
+    },
+    {
+        "shell": "C:\\Windows\\System32\\bash.exe",
+        "label": "WSL Bash"
+    }
+
+}
