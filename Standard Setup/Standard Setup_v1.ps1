@@ -1,4 +1,10 @@
-## Starting from the beginning - for setting up a server specifically for DHCP
+<# 
+~ General Setup
+    - New IP address, Gateway, DNS Server 
+    - Optional Join Domain
+
+
+#>
 $IPAddress = "192.168.202.151"           # ie. 192.168.0.10
 $IPAlias = "Ethernet"               # ie. "Ethernet0"
 $DNSServer = "192.168.202.150"
@@ -9,11 +15,12 @@ $DomainCredential = "dmit2023.local\administrator"
 
 
 Get-NetIPAddress -InterfaceAlias $IPAlias -AddressFamily IPv4 | Remove-NetIPAddress
-New-NetIPAddress -IPAddress $IPAddress -InterfaceAlias $IPAlias  -AddressFamily IPv4 -PrefixLength 24
+New-NetIPAddress -IPAddress $IPAddress -InterfaceAlias $IPAlias  -AddressFamily IPv4 -PrefixLength 24 #-DefaultGateway $DefaultGateway
 Set-DnsClientServerAddress -InterfaceAlias $IPAlias -ServerAddresses $DNSServer
 Rename-Computer -NewName $Computername -Restart -Confirm
-## OPTIONAL - Join to Domain (Specify -Computernameâ€ if adding multiple computers remotely
-Add-Computer -DomainName $DomainName -Restart $DomainCredential dmit2023.local\administrator -verbose
+
+##@ OPTIONAL - Join to Domain (Specify -Computername if adding multiple computers remotely
+Add-Computer -DomainName $DomainName -Restart -credential $DomainCredential -verbose
 
 # Rename Computer ###################
 ## Method 1 - performed locally, domain credential is the user with admin rights
