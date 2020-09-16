@@ -34,7 +34,7 @@ Disable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip6
 Get-WindowsFeature | Where-Object installed
 
 #~ Grabbing current script LOCATION ##################################################
-# Path including the script itself
+# Path to the script itself
 $PSCommandPath
 # Path to just the root
 $PSScriptRoot
@@ -107,6 +107,8 @@ Invoke-Command -ScriptBlock { Script-code } -ComputerName server1
 # Invoke-command may require credentials
 $creds = Get-Credential
 Invoke-Command -Credentials $creds -ScriptBlock { Script-code } -ComputerName server1
+# Invoke-command basic script
+Invoke-Command -ComputerName 192.168.50.13 -ScriptBlock { Get-ChildItem C:\ } -credential Administrator
 
 ###~ CHANGING IP ADDRESS REMOTELY ######################################################
 # Grab remotes current IP address and ethernet info, remove it and use new-netipaddress. Don't bother with Set-netipaddress, this works better locally

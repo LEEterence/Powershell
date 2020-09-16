@@ -1,7 +1,7 @@
 # create more variables
 Install-WindowsFeature –Name AD-Domain-Services -IncludeManagementTools
 Import-Module ADDSDeployment
-$password = ConvertTo-SecureString "Password1" -Force
+$password = ConvertTo-SecureString "Password1" -AsPlainText -Force
 
 $Params = @{
     CreateDnsDelegation           = $false

@@ -5,6 +5,7 @@ $IPAddress = "192.168.202.3"           # ie. 192.168.0.10
 $IPAlias = "Ethernet0"               # ie. "Ethernet0"
 $Computername = "TEST01"        # ie. DC01
 
+
 Get-NetIPAddress -InterfaceAlias $IPAlias | Remove-NetIPAddress -Verbose
 New-NetIPAddress -IPAddress $IPAddress -InterfaceAlias $IPAlias  -AddressFamily IPv4 -PrefixLength 24
 Set-DnsClientServerAddress -InterfaceAlias $IPAlias -ServerAddresses $IPAddress

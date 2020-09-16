@@ -6,7 +6,7 @@
 
 #>
 $IPAddress = "192.168.202.151"           # ie. 192.168.0.10
-$IPAlias = "Ethernet"               # ie. "Ethernet0"
+$IPAlias = "Ethernet0"               # ie. "Ethernet0"
 $DNSServer = "192.168.202.150"
 $DefaultGateway = ""
 $Computername = "WSUS01"        # ie. DC01
