@@ -19,12 +19,12 @@ Write-Host "Settings Correct? (Y/N)" -ForegroundColor Cyan
 $flag = Read-Host 
 
 if ($flag.ToUpper() -eq 'Y') {
-    "nice"
     # Disable IPv6 on all network adapters 
     Disable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip6
     # Removing network adapter and adding new
-    Get-NetIPAddress -InterfaceAlias $IPAlias -AddressFamily IPv4 | Remove-NetIPAddress
-    New-NetIPAddress -IPAddress $IPAddress -InterfaceAlias $IPAlias  -AddressFamily IPv4 -PrefixLength 24 -DefaultGateway $DefaultGateway # Default Gateway may be removed in some cases
+    Get-NetIPAddress -InterfaceAlias $IPAlias -AddressFamily IPv4 | Remove-NetIPAddress -ErrorAction Stop
+    New-NetIPAddress -IPAddress $IPAddress -InterfaceAlias $IPAlias  -AddressFamily IPv4 -PrefixLength 24 -DefaultGateway $DefaultGateway -ErrorAction Stop
+    # Default Gateway may be removed in some cases
     Set-DnsClientServerAddress -InterfaceAlias $IPAlias -ServerAddresses $DNSServer
     Rename-Computer -NewName $Computername -Restart -Confirm
 
