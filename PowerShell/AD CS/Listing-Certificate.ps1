@@ -38,10 +38,14 @@ Remove-Item –Path Cert:\LocalMachine\My\DE53B1272E43C14545A448FB892F7C07A217A7
 
 # Additional Filtering Techniques #####################################################
 # Friendly Certificate Name
-
+dir cert: -Recurse | Where-Object { $_.FriendlyName -like "*DigiCert*" }
 # Thumbprint
-
+# This will list any certificates that isn't valid after the 31 Dec 2018
+dir cert: -Recurse | Where-Object { $_.Thumbprint -like "*0563B8630D62D75ABBC8AB1E4B*" }
 #Expiry Date
+dir cert: -Recurse | Where-Object { $_.NotAfter -lt (Get-Date 2018-12-31) }
+#This will list any certificates that will expire the upcomming year, from now and one year ahead
+dir cert: -Recurse | Where-Object { $_.NotAfter -gt (Get-Date) -and $_.NotAfter -lt (Get-Date).AddYears(1) }
 
 <# 
 Source:

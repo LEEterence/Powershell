@@ -33,5 +33,6 @@ if ($flag.ToUpper() -eq 'Y') {
 }
 else {
     Write-Host "Exiting - recheck script" -ForegroundColor Red
+    Exit
 }
 

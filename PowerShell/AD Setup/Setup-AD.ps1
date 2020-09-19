@@ -27,7 +27,7 @@ Install-ADDSForest `
     -Force:$true
 # Will be Prompted for DSRM recovery password, must set -NoRebootOnCompletion to $false
 # May require a COMPLEX password
-Restart-Computer -Confirm
+Restart-Computer 
 
 
 # After Restart, then verify below - COMMENT OUT FIRST
