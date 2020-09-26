@@ -2,10 +2,10 @@
 TODO Will test this script to see if it works with reboot_run
 #>
 
-Install-WindowsFeature –Name AD-Domain-Services -IncludeManagementTools 
+Install-WindowsFeature –Name AD-Domain-Services, RSAT-ADDS-Tools-IncludeManagementTools 
 Import-Module ADDSdeployment 
 Install-ADDSForest `
-    –DomainName dmit2515.local `
+    –DomainName enron.com `
     –SafeModeAdministratorPassword (ConvertTo-SecureString Password1 –AsPlainText –Force) `
     –DomainMode WinThreshold `
     –DomainNetbiosname ENRON  `
@@ -34,3 +34,7 @@ Install-ADDSForest `
 # Will be Prompted for DSRM recovery password, must set -NoRebootOnCompletion to $false
 # May require a COMPLEX password
 Restart-Computer #>
+
+Install-WindowsFeature AD-Domain-Services, RSAT-ADDS-Tools
+Install-ADDSForest –DomainName ENRON.COM –SafeModeAdministratorPassword (ConvertToSecureString Password1 –AsPlainText –Force) –DomainMode WinThreshold –
+DomainNetbiosname ENRON –ForestMode WinThreshold -InstallDNS -Confirm:$False

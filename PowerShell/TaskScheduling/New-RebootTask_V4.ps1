@@ -35,18 +35,21 @@ if (Test-Path $TestFilePath) {
     Register-ScheduledTask -Settings $schOption -Action $schAction -Trigger $schTrigger -TaskName "Configuration" -Description "Scheduled Task to run configuration Script At Startup" -Principal $schPrincipal 
     Write-Output "[$Time] Before reboot" | out-file C:\Log.txt -Append
     #Extra Code Here ###################################################
+    #@ Running setup script to automate 3 scripts in one - all 3 scripts must be in the same location
+    #? Going through the below process MIGHT be causing the DC promotion errors ()
+    #$RunScript = $PSScriptRoot + "\Standard Setup_v2"
+    #&$RunScript
+    Rename-Computer Terence -Restart -Confirm
 
-
-
-    Restart-Computer 
-    #@ Test waiting?
-    #Sleep 30
-    #Unregister-ScheduledTask -TaskName "Configuration" -Confirm:$false
-
+    #@ Test waiting? ##########
+    taskschd.msc
+    Sleep 60
+    Unregister-ScheduledTask -TaskName "Configuration" -Confirm:$false
     
     Write-Output "[$Time] After reboot" | out-file C:\Log.txt -Append
 }
 else {
+    Write-Host "Source not found" -ForegroundColor Red
     $Time = Get-Date
     Write-Output "[$Time] Script cannot be found at $TestFilePath" | out-file C:\Log.txt -Append
     Exit

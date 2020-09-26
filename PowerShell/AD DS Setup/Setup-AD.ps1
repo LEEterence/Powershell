@@ -14,15 +14,15 @@ Import-Module ADDSDeployment
 # AD DS installation
 Install-ADDSForest `
     -CreateDnsDelegation:$false `
-    -DatabasePath "C:\Windows\NTDS" `
     -DomainMode "WinThreshold" `
     -DomainName $DomainName `
     -DomainNetbiosName $DomainNetBios `
     -ForestMode "WinThreshold" `
     -InstallDns:$true `
+    -DatabasePath "C:\Windows\NTDS" `
     -LogPath "C:\Windows\NTDS" `
-    -NoRebootOnCompletion:$false `
     -SysvolPath "C:\Windows\SYSVOL" `
+    -NoRebootOnCompletion:$true `
     -SafeModeAdministratorPassword $DSRM `
     -Force:$true
 # Will be Prompted for DSRM recovery password, must set -NoRebootOnCompletion to $false
