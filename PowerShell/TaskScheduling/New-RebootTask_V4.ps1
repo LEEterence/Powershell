@@ -43,9 +43,9 @@ if (Test-Path $TestFilePath) {
 
     #@ Test waiting? ##########
     taskschd.msc
-    Sleep 60
+    Start-Sleep 60
     Unregister-ScheduledTask -TaskName "Configuration" -Confirm:$false
-    
+
     Write-Output "[$Time] After reboot" | out-file C:\Log.txt -Append
 }
 else {

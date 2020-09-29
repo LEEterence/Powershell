@@ -16,3 +16,4 @@ Get-ChildItem C:\Example -Recurse | Rename-Item -NewName
 
 # 3. Filter based on 'current' and 'new' into array. Use current PSITEM to change filtered values to new value.
 Get-ChildItem C:\Example -Recurse | Rename-Item -NewName { $_.Name -replace 'Current', 'new' }
+    #@ Use an asterisk at the end of "Current" to select more than 1
