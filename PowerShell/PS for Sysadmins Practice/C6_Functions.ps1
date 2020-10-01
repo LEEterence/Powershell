@@ -3,7 +3,7 @@ function Install-Software {
     [Cmdletbinding()]
     param(
         # Setting a mandatory parameter
-        [Parameter(Mandatory)]
+        [Parameter(Mandatory = $True)]
         [string] $Name,
         # Setting default value for $Version
         [Parameter()]

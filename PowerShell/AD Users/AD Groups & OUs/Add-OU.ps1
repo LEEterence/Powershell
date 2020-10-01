@@ -18,7 +18,6 @@ foreach ($item in $OUPath) {
             -DisplayName $item.Displayname `
             -Path $item.path
     }
-
 }
 
 #New-ADOrganizationalUnit -Name "UserAccounts" -Path "DC=ENRON,DC=COM"
