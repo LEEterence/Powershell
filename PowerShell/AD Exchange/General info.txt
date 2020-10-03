@@ -1,0 +1,21 @@
+Using EMS:
+
+Enable-Mailbox
+Get-Content
+Get-IRMConfiguration
+Get-Mailbox
+Get-MailboxDatabase
+Get-MailboxImportRequest
+Get-MailboxStatistics
+Get-User
+Import-Csv
+Move-Databasepath
+Mount-Database
+New-ADOrganizationalUnit
+New-ADUser
+New-DistributionGroup
+New-MailboxDatabase
+New-MailboxImportRequest
+New-ManagementRoleAssignment
+Set-IRMConfiguration
+Test-IRMConfiguration

@@ -8,7 +8,7 @@ $FileLocation = ""
 
 $OUPath = Import-Csv $FileLocation
 
-foreach ($item in $OUPath) {
+$OUPath.foreach({
     $CheckOU = [adsi]::Exists("LDAP://$($item.Path)")
     if ($CheckOU -eq $true) {
         Write-Host "$($item.Name) already exists. Skipping." -ForegroundColor DarkMagenta
@@ -17,8 +17,8 @@ foreach ($item in $OUPath) {
             -Name $item.Name `
             -DisplayName $item.Displayname `
             -Path $item.path `
-            -Verbose
+            -Whatif
     }
-}
+})
 
 #New-ADOrganizationalUnit -Name "UserAccounts" -Path "DC=ENRON,DC=COM"
