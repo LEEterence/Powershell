@@ -17,6 +17,7 @@ foreach ($item in $OUPath) {
             -Name $item.Name `
             -DisplayName $item.Displayname `
             -Path $item.path `
+            -ProtectedfromAccidentalDeletion $false `
             -Verbose
     }
 }
