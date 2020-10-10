@@ -9,3 +9,5 @@ $serverList = @{
 $serverList.Keys 
 $serverList.Add('server4','WDS01')
 $serverList.Values
+# GetEnumerator grabs the whole hashtable - keys and values
+$serverList.GetEnumerator()

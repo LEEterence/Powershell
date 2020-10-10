@@ -17,6 +17,33 @@ $serverList | ForEach-Object {
     Write-Host "$_ is active at $time using foreach-OBJECT"
 }
 # BEST METHOD - foreach method. More efficient for large data sets
-# NOTE
+# @NOTE the braces are OPPOSITE
 $serverList.foreach({Write-Host "$_ is active at $time using foreach METHOD"})
 
+# CSV manipulation ##################
+# Some hashtables too
+
+$employeeList = @{
+    '1' = 'Kenneth Lay'
+    '2' = 'Mike Swerzbin'
+    '3'= 'Monika Causholli'
+    '4'= 'Monique Sanchez'
+    '5'= 'Paul Lucci'
+    '6'= 'Peter Keavey'
+    '7'= 'Phillip Allen'
+}
+
+$data = import-csv "E:\_Git\Powershell\PowerShell\PS for Sysadmins Practice\C4_Foreach.csv" | 
+Where-Object {$_.givenname -like 'Dan'}
+$data.Surname
+$data.OfficePhone
+# Testing with $employeelist hashtable
+import-csv "E:\_Git\Powershell\PowerShell\PS for Sysadmins Practice\C4_Foreach.csv" | 
+Where-Object {
+        foreach($employee in $employeeList.GetEnumerator())
+        {
+            if ($employee.Values -eq $_.($employee.Name)) {
+                Write-Host "$($emp.value) found."
+            }
+        }
+    }

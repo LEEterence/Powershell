@@ -20,5 +20,3 @@ $OUPath.foreach({
             -Whatif
     }
 })
-
-#New-ADOrganizationalUnit -Name "UserAccounts" -Path "DC=ENRON,DC=COM"

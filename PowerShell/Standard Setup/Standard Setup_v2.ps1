@@ -3,8 +3,6 @@
     - New IP address, Gateway, DNS Server 
     - Optional Join Domain
 #>
-
-
 $IPAddress = "192.168.202.4"           # ie. 192.168.0.10
 $IPAlias = "Ethernet0"               # ie. "Ethernet0"
 $DNSServer = "192.168.202.2"
