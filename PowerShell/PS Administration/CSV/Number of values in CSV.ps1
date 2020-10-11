@@ -1,0 +1,1 @@
+﻿import-csv "C:\Lab 1\departments_noLEGAL or EXEC.csv" | Measure-Object -Property path -Line
