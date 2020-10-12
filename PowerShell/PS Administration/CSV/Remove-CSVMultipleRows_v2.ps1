@@ -1,5 +1,6 @@
-﻿$remove_value_row = @{
-    "Name" = "IT"
+﻿et-Service *Exchange* | Where-Object {$_.DisplayName -NotLike "*Hyper-V*"}
+$remove_value_row = @{
+    "Name" = "IT", "Admin","Accounting"
 }
 
 Import-Csv "C:\Lab 1\departments_noLEGAL or EXEC.csv" |

@@ -1,4 +1,7 @@
-﻿
+﻿<# 
+
+@ MUST be ran in EMS
+#>
 # MUST be ran in EMS
 
 $Filelocation = "C:\Lab 1\departments_noLEGAL or EXEC.csv"
@@ -76,10 +79,9 @@ if ($existCount -gt 0){
 
 # Variable Declaration
 $flag = $false
-$check = ""
 
 do{
-
+    # try-catch mainly for checking if Database exists
     try{
         # Verifying database exists (not really using try-catch yet..)
         $Database = Read-Host "Specify the database to Store User Mailboxes"
@@ -89,38 +91,32 @@ do{
         $ErrorCount = 0
         $SuccessCount = 0
     
-        #if($DatabaseTest -ne $null){
-            # Looping to enable mailboxes for each OU in CSV
-            $OU.ForEach({
-                $Name = $_.Name
-                $DN = $_.Path
-                $DisplayName = $_.'Display Name'
-                try{
-                    Write-Host "`n[Enable Mailbox]`nDepartment: $Name`nDatabase: $Database" -ForegroundColor Cyan
-                    Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Cyan
-                    Get-User -OrganizationalUnit $Name | Enable-mailbox -Database $Database 
-                    $SuccessCount++
-                }
-                catch
-                {
-                    Write-Host "Error enabling mailboxes for OU: $Name" -ForegroundColor Red
-                    $ErrorCount++
-                }
-                finally
-                {
-                    Sleep 1
-                    $totalCount = $ErrorCount + $SuccessCount
-                    Write-Verbose "Total OU enable mailbox errors: $totalCount"
+        $OU.ForEach({
+            $Name = $_.Name
+            $DN = $_.Path
+            $DisplayName = $_.'Display Name'
+            try{
+                Write-Host "`n[Enable Mailbox]`nDepartment: $Name`nDatabase: $Database" -ForegroundColor Cyan
+                Write-Host "---------------------------------------------------------------------------------" -ForegroundColor Cyan
+                Get-User -OrganizationalUnit $Name | Enable-mailbox -Database $Database 
+                $SuccessCount++
+            }
+            catch
+            {
+                Write-Host "Error enabling mailboxes for OU: $Name" -ForegroundColor Red
+                $ErrorCount++
+            }
+            finally
+            {
+                Start-Sleep 1
+                $totalCount = $ErrorCount + $SuccessCount
+                Write-Verbose "Total OU enable mailbox errors: $totalCount"
 
-                    $Percent = (($totalCount/$OU.Count)* 100)
-                    Write-Progress -Activity "Running Script..." -Status "Completion Progress: $Percent%" -PercentComplete $Percent -CurrentOperation "$($Name)"
-                }
-            })
-            $flag = $true
-        #}
-        #else{
-        #    Write-Host "Database not found" -ForegroundColor Red
-        #}
+                $Percent = (($totalCount/$OU.Count)* 100)
+                Write-Progress -Activity "Running Script..." -Status "Completion Progress: $Percent%" -PercentComplete $Percent -CurrentOperation "$($Name)"
+            }
+        })
+        $flag = $true
     }
     catch{
         $flag = Read-Host "No database found. Try Again? (Y/N)"
