@@ -6,8 +6,10 @@ Must execute them, cannot simply call on the variable
 
 $testScript = {Write-Host "This is in a script block" -ForegroundColor Cyan}
     # Output: Write-Host "This is in a script block" -ForegroundColor Cyan
+# Below execution results in nothing
 $testScript
 # Executing the Ps Code with an Ampersand
+    # Output: "This is in a script block"
 & $testScript 
 
 # Reminder: Comparison to a function (which doesn't require an ampersand to execute)

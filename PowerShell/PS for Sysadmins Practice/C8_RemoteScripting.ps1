@@ -41,3 +41,16 @@ Get-PSSession | Remove-PSSession
 Enter-Pssession -ComputerName Desktop01
 
 # Double Hop problem: Entering PS session of a computer and then attempting to access resources of another remote computer in the initial PS session
+    # Example: Enter-pssession into a web server and then attempting to access a resource from a file server in
+# WORKAROUND: CredSSP - set the initial remote computer as client and the other remote computer as the server
+# 1. Setup CredSSP on the client (initial computer)
+    # Can use "-delegatecomputer *" to specify all computers but this is a security concern
+Enable-WSManCredSSP -Role Client -DelegateComputer Desktop01
+# 2. Setup CredSSP  on the server (second remote computer) 
+    #@ Delegate Computer and Computer name have to be the same!
+invoke-command -ComputerName Desktop01 -ScriptBlock {Enable-WSManCredSSP -Role Server}
+# 3. Execution 
+#@ NOTE: TAKES A LONG TIME
+invoke-command -ComputerName Desktop01 -ScriptBlock {Get-ChildItem "\\rds01\C$"} -Authentication Credssp -Credential terence\tlee37
+# 4. (OPTIONAL) Disable CredSSP afterwards
+Disable-WSManCredSSP
