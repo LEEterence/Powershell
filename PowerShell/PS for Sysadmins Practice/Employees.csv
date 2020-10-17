@@ -1,0 +1,138 @@
+Name,GivenName,Surname,samAccountName,OfficePhone,Department,Path,UserPrincipalName,,,Description
+Albert Meyers,Albert,Meyers,Albert.Meyers,503.880.5315,Portland,"OU=Portland,OU=Departments,DC=enron,DC=com",Albert.Meyers@enron.com,,,Portland Specialist
+Andrea Ring,Andrea,Ring,Andrea.Ring,713.853.5775,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Andrea.Ring@enron.com,,,Trader
+Andrew Lewis,Andrew,Lewis,Andrew.Lewis,713.853.6278,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Andrew.Lewis@enron.com,,,Trader
+Andy Zipper,Andy,Zipper,Andy.Zipper,713.853.6994,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Andy.Zipper@enron.com,,,Vice President Enron Online
+Barry Tycholiz,Barry,Tycholiz,Barry.Tycholiz,713.853.1587,PR,"OU=PR,OU=Departments,DC=enron,DC=com",Barry.Tycholiz@enron.com,,,Vice President
+Benjamin Rogers,Benjamin,Rogers,Benjamin.Rogers,713.853.7998,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Benjamin.Rogers@enron.com,,,Trader
+Bill Rapp,Bill,Rapp,Bill.Rapp,713.853.5269,Legal,"OU=Legal,OU=Departments,DC=enron,DC=com",Bill.Rapp@enron.com,,,Legal
+Brad Mckay,Brad,Mckay,Brad.Mckay,713.853.7699,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Brad.Mckay@enron.com,,,Traders
+Cara Semperger,Cara,Semperger,Cara.Semperger,503.464.3814,Portland,"OU=Portland,OU=Departments,DC=enron,DC=com",Cara.Semperger@enron.com,,,Senior Analyst Cash
+Chris Dorland,Chris,Dorland,Chris.Dorland,713.853.1663,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Chris.Dorland@enron.com,,,Traders
+Chris Germany,Chris,Germany,Chris.Germany,713.853.4743,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Chris.Germany@enron.com,,,Traders
+Chris Stokley,Chris,Stokley,Chris.Stokley,713.345.6120,Managers,"OU=Managers,OU=Departments,DC=enron,DC=com",Chris.Stokley@enron.com,,,Manager 
+Cooper Richey,Cooper,Richey,Cooper.Richey,403.974.6946,Calgary,"OU=Calgary,OU=Departments,DC=enron,DC=com",Cooper.Richey@enron.com,,,Calgary Manager
+Craig Dean,Craig,Dean,Craig.Dean,713.853.0484,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Craig.Dean@enron.com,,,Trader
+Dana Davis,Dana,Davis,Dana.Davis,713.853.7520,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Dana.Davis@enron.com,,,Vice President
+Danny Mccarty,Danny,Mccarty,Danny.Mccarty,713.345.3271,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Danny.Mccarty@enron.com,,,Vice President
+Dan Hyvl,Dan,Hyvl,Dan.Hyvl,713.853.6895,Legal,"OU=Legal,OU=Departments,DC=enron,DC=com",Dan.Hyvl@enron.com,,,Senior Attourney
+Daren Farmer,Daren,Farmer,Daren.Farmer,713.853.6905,Managers,"OU=Managers,OU=Departments,DC=enron,DC=com",Daren.Farmer@enron.com,,,Logistics Manager
+Darrell Schoolcraft,Darrell,Schoolcraft,Darrell.Schoolcraft,713.853.4299,Analysts,"OU=Analysts,OU=Departments,DC=enron,DC=com",Darrell.Schoolcraft@enron.com,,,Analyst
+David Delainey,David,Delainey,David.Delainey,713.853.3829,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",David.Delainey@enron.com,,,CEO Enron North
+Debra Perlingiere,Debra,Perlingiere,Debra.Perlingiere,713.853.7658,Legal,"OU=Legal,OU=Departments,DC=enron,DC=com",Debra.Perlingiere@enron.com,,,Legal
+Diana Scholtes,Diana,Scholtes,Diana.Scholtes,503.464.3807,Denver,"OU=Denver,OU=Departments,DC=enron,DC=com",Diana.Scholtes@enron.com,,,Denver
+Don Baughman,Don,Baughman,Don.Baughman,713.853.0392,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Don.Baughman@enron.com,,,Trader
+Drew Fossum,Drew,Fossum,Drew.Fossum,713.444.7010,Legal,"OU=Legal,OU=Departments,DC=enron,DC=com",Drew.Fossum@enron.com,,,Vice President and General Counsel of ETS
+Dutch Quigley,Dutch,Quigley,Dutch.Quigley,713.853.9216,Analysts,"OU=Analysts,OU=Departments,DC=enron,DC=com",Dutch.Quigley@enron.com,,,Analyst (Gas)
+Elizabeth Sager,Elizabeth,Sager,Elizabeth.Sager,713.853.6349,Legal,"OU=Legal,OU=Departments,DC=enron,DC=com",Elizabeth.Sager@enron.com,,,Legal
+Eric Linder,Eric,Linder,Eric.Linder,503.464.8716,Portland,"OU=Portland,OU=Departments,DC=enron,DC=com",Eric.Linder@enron.com,,,Portland RT Trader
+Eric Saibi,Eric,Saibi,Eric.Saibi,713.853.5012,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Eric.Saibi@enron.com,,,Trader
+Fletcher Sturm,Fletcher,Sturm,Fletcher.Sturm,713.853.6219,Finance,"OU=Finance,OU=Departments,DC=enron,DC=com",Fletcher.Sturm@enron.com,,,Vice President
+Frank Ermis,Frank,Ermis,Frank.Ermis,713.853.3002,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Frank.Ermis@enron.com,,,Director Trading West
+Geir Solberg,Geir,Solberg,Geir.Solberg,503.772.0515,Portland,"OU=Portland,OU=Departments,DC=enron,DC=com",Geir.Solberg@enron.com,,,Portland Analyst
+Gerald Nemec,Gerald,Nemec,Gerald.Nemec,713.853.3512,Legal,"OU=Legal,OU=Departments,DC=enron,DC=com",Gerald.Nemec@enron.com,,,Legal
+Harry Arora,Harry,Arora,Harry.Arora,713.853.6750,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Harry.Arora@enron.com,,,VP Financial Trading
+Holden Salisbury,Holden,Salisbury,Holden.Salisbury,503.807.5669,Portland,"OU=Portland,OU=Departments,DC=enron,DC=com",Holden.Salisbury@enron.com,,,Portland Cash Analyst
+Hunter Shively,Hunter,Shively,Hunter.Shively,713.853.4772,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Hunter.Shively@enron.com,,,Vice President
+James Derrick,James,Derrick,James.Derrick,713.853.5550,Legal,"OU=Legal,OU=Departments,DC=enron,DC=com",James.Derrick@enron.com,,,Executive Vice President & General Counsel 
+James Steffes,James,Steffes,James.Steffes,713.853.7673,Government,"OU=Government,OU=Departments,DC=enron,DC=com",James.Steffes@enron.com,,,Vice President Government Affairs
+Jane Tholt,Jane,Tholt,Jane.Tholt,713.853.5539,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Jane.Tholt@enron.com,,,Trader
+Jason Wolfe,Jason,Wolfe,Jason.Wolfe,713.853.0568,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Jason.Wolfe@enron.com,,,Trader
+Jay Reitmeyer,Jay,Reitmeyer,Jay.Reitmeyer,713.853.3536,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Jay.Reitmeyer@enron.com,,,Trader
+Jeff Dasovich,Jeff,Dasovich,Jeff.Dasovich,415.782.7822,Government,"OU=Government,OU=Departments,DC=enron,DC=com",Jeff.Dasovich@enron.com,,,Government Relation Executive
+Jeff Skilling,Jeff,Skilling,Jeff.Skilling,713.853.6894,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Jeff.Skilling@enron.com,,,Jeff Skilling
+Jim Schwieger,Jim,Schwieger,Jim.Schwieger,713.853.7705,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Jim.Schwieger@enron.com,,,Trader
+Joe Parks,Joe,Parks,Joe.Parks,713.853.9636,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Joe.Parks@enron.com,,,Trader
+Joe Quenet,Joe,Quenet,Joe.Quenet,713.853.5229,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Joe.Quenet@enron.com,,,Trader
+Joe Stepenovitch,Joe,Stepenovitch,Joe.Stepenovitch,713.853.1955,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Joe.Stepenovitch@enron.com,,,Vice President  Enery Marketing and Trading Florida
+John Arnold,John,Arnold,John.Arnold,713.557.3330,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",John.Arnold@enron.com,,,Vice President
+John Forney,John,Forney,John.Forney,713.853.7160,Managers,"OU=Managers,OU=Departments,DC=enron,DC=com",John.Forney@enron.com,,,Manager Real time Trading
+John Griffith,John,Griffith,John.Griffith,713.569.6435,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",John.Griffith@enron.com,,,Trader
+John Hodge,John,Hodge,John.Hodge,713.853.7276,Managers,"OU=Managers,OU=Departments,DC=enron,DC=com",John.Hodge@enron.com,,,Managing Director
+John Lavorato,John,Lavorato,John.Lavorato,713.853.7991,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",John.Lavorato@enron.com,,,CEO Enron America
+John Zufferli,John,Zufferli,John.Zufferli,403.685.4817,Calgary,"OU=Calgary,OU=Departments,DC=enron,DC=com",John.Zufferli@enron.com,,,Calgary Vice President
+Jonathan Mckay,Jonathan,Mckay,Jonathan.Mckay,403.974.6733,Calgary,"OU=Calgary,OU=Departments,DC=enron,DC=com",Jonathan.Mckay@enron.com,,,Calgary Director
+Juan Hernandez,Juan,Hernandez,Juan.Hernandez,713.853.0383,Analysts,"OU=Analysts,OU=Departments,DC=enron,DC=com",Juan.Hernandez@enron.com,,,Senior Specialist Logistics
+Judy Townsend,Judy,Townsend,Judy.Townsend,713.853.1755,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Judy.Townsend@enron.com,,,Trader
+Kam Keiser,Kam,Keiser,Kam.Keiser,713.853.5781,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Kam.Keiser@enron.com,,,Trader
+Karen Heathman,Karen,Heathman,Karen.Heathman,713.853.5982,Admins,"OU=Admins,OU=Departments,DC=enron,DC=com",Karen.Heathman@enron.com,,,Assitant to Rick Buy
+Kate Symes,Kate,Symes,Kate.Symes,503.464.7486,Portland,"OU=Portland,OU=Departments,DC=enron,DC=com",Kate.Symes@enron.com,,,Portland West Desk Deal Control
+Katherine Brown,Katherine,Brown,Katherine.Brown,713.345.7774,Admins,"OU=Admins,OU=Departments,DC=enron,DC=com",Katherine.Brown@enron.com,,,Assistant to Jeff Skilling
+Kay Chapman,Kay,Chapman,Kay.Chapman,713.853.0643,Admins,"OU=Admins,OU=Departments,DC=enron,DC=com",Kay.Chapman@onron.com,,,Assistant to Dave Delainey
+Kay Mann,Kay,Mann,Kay.Mann,713.345.7566,Legal,"OU=Legal,OU=Departments,DC=enron,DC=com",Kay.Mann@enron.com,,,Attourney
+Keith Holst,Keith,Holst,Keith.Holst,713.853.7069,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Keith.Holst@enron.com,,,Trader
+Kenneth Lay,Kenneth,Lay,Kenneth.Lay,713.853.6773,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Kenneth.Lay@enron.com,,,CEO
+Kevin Hyatt,Kevin,Hyatt,Kevin.Hyatt,713.853.5559,Managers,"OU=Managers,OU=Departments,DC=enron,DC=com",Kevin.Hyatt@enron.com,,,Director Pipeline Business
+Kevin Presto,Kevin,Presto,Kevin.Presto,713.853.5800,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Kevin.Presto@enron.com,,,Vice President
+Kevin Ruscitti,Kevin,Ruscitti,Kevin.Ruscitti,713.853.6320,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Kevin.Ruscitti@enron.com,,,Trader
+Kimberly Watson,Kimberly,Watson,Kimberly.Watson,713.853.3098,Marketing,"OU=Marketing,OU=Departments,DC=enron,DC=com",Kimberly.Watson@enron.com,,,Marketing
+Kim Ward,Kim,Ward,Kim.Ward,713.853.0685,Managers,"OU=Managers,OU=Departments,DC=enron,DC=com",Kim.Ward@enron.com,,,Manager West Gas Origination
+Larry Campbell,Larry,Campbell,Larry.Campbell,713.853.9351,HR,"OU=HR,OU=Departments,DC=enron,DC=com",Larry.Campbell@enron.com,,,Senior Specialist
+Larry May,Larry,May,Larry.May,713.853.6731,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Larry.May@enron.com,,,Trader
+Lindy Donoho,Lindy,Donoho,Lindy.Donoho,713.853.6007,Marketing,"OU=Marketing,OU=Departments,DC=enron,DC=com",Lindy.Donoho@enron.com,,,Marketing
+Lisa Gang,Lisa,Gang,Lisa.Gang,713.853.5070,Scheduling,"OU=Scheduling,OU=Departments,DC=enron,DC=com",Lisa.Gang@enron.com,,,Scheduling
+Liz Taylor,Liz,Taylor,Liz.Taylor,713.853.1935,Admins,"OU=Admins,OU=Departments,DC=enron,DC=com",Liz.Taylor@enron.com,,,Admin
+Louise Kitchen,Louise,Kitchen,Louise.Kitchen,713.853.3488,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Louise.Kitchen@enron.com,,,COO Enron ENA
+Lynn Blair,Lynn,Blair,Lynn.Blair,713.853.7637,CustomerService,"OU=CustomerService,OU=Departments,DC=enron,DC=com",Lynn.Blair@enron.com,,,Director Customer Service
+Marie Heard,Marie,Heard,Marie.Heard,713.853.3907,Legal,"OU=Legal,OU=Departments,DC=enron,DC=com",Marie.Heard@enron.com,,,Senior Legal Specialist
+Mark Guzman,Mark,Guzman,Mark.Guzman,503.702.0463,Portland,"OU=Portland,OU=Departments,DC=enron,DC=com",Mark.Guzman@enron.com,,,Portland
+Mark Haedicke,Mark,Haedicke,Mark.Haedicke,713.853.6544,Legal,"OU=Legal,OU=Departments,DC=enron,DC=com",Mark.Haedicke@enron.com,,,Managing Director Legal Department
+Mark Taylor,Mark,Taylor,Mark.Taylor,713.853.7459,Legal,"OU=Legal,OU=Departments,DC=enron,DC=com",Mark.Taylor@enron.com,,,ECT legal
+Mark Whitt,Mark,Whitt,Mark.Whitt,303.575.6473,Denver,"OU=Denver,OU=Departments,DC=enron,DC=com",Mark.Whitt@enron.com,,,"Enron North America Denver, CO. office"
+Martin Cuilla,Martin,Cuilla,Martin.Cuilla,713.853.5933,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Martin.Cuilla@enron.com,,,Trader
+Mary Fischer,Mary,Fischer,Mary.Fischer,713.853.5449,Accounting,"OU=Accounting,OU=Departments,DC=enron,DC=com",Mary.Fischer@enron.com,,,Accounting
+Mary Hain,Mary,Hain,Mary.Hain,503.464.8862,Government,"OU=Government,OU=Departments,DC=enron,DC=com",Mary.Hain@enron.com,,,Director of Federal Regulatory Affairs
+Matthew Lenhart,Matthew,Lenhart,Matthew.Lenhart,713.825.8410,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Matthew.Lenhart@enron.com,,,Trader
+Matt Motley,Matt,Motley,Matt.Motley,515.124.4567,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Matt.Motley@enron.com,,,Trader
+Michael Maggi,Michael,Maggi,Michael.Maggi,713.999.8009,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Michael.Maggi@enron.com,,,Director
+Michelle Cash,Michelle,Cash,Michelle.Cash,713.853.6401,Legal,"OU=Legal,OU=Departments,DC=enron,DC=com",Michelle.Cash@enron.com,,,HR Attourney
+Michelle Lokay,Michelle,Lokay,Michelle.Lokay,713.345.7932,Managers,"OU=Managers,OU=Departments,DC=enron,DC=com",Michelle.Lokay@enron.com,,,Manager Transwestern Commercial Group
+Mike Carson,Mike,Carson,Mike.Carson,713.853.6203,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Mike.Carson@enron.com,,,Wholesale Trader
+Mike Grigsby,Mike,Grigsby,Mike.Grigsby,713.853.7031,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Mike.Grigsby@enron.com,,,"VICE PRESIDENT, WEST GAS TRADING"
+Mike Swerzbin,Mike,Swerzbin,Mike.Swerzbin,503.464.3816,Portland,"OU=Portland,OU=Departments,DC=enron,DC=com",Mike.Swerzbin@enron.com,,,Portland
+Monika Causholli,Monika,Causholli,Monika.Causholli,713.345.1510,Analysts,"OU=Analysts,OU=Departments,DC=enron,DC=com",Monika.Causholli@enron.com,,,Enron Industrial Markets
+Monique Sanchez,Monique,Sanchez,Monique.Sanchez,713.853.1917,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Monique.Sanchez@enron.com,,,Trader
+Paul Lucci,Paul,Lucci,Paul.Lucci, 303.575.6474,Denver,"OU=Denver,OU=Departments,DC=enron,DC=com",Paul.Lucci@enron.com,,,Denver Trader
+Peter Keavey,Peter,Keavey,Peter.Keavey,713.853.7277,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Peter.Keavey@enron.com,,,Trader
+Phillip Allen,Phillip,Allen,Phillip.Allen,713.853.7041,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Phillip.Allen@enron.com,,,Trader
+Phillip Platter,Phillip,Platter,Phillip.Platter,503.464.3934,Portland,"OU=Portland,OU=Departments,DC=enron,DC=com",Phillip.Platter@enron.com,,,Portland
+Richard Ring,Richard,Ring,Richard.Ring,713.853.3561,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Richard.Ring@enron.com,,,"Trader Enron Energy Services, Inc"
+Richard Sanders,Richard,Sanders,Richard.Sanders,713.853.5587,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Richard.Sanders@enron.com,,,Vice President Enron WholeSale Services
+Richard Shapiro,Richard,Shapiro,Richard.Shapiro,713.853.3407,Legal,"OU=Legal,OU=Departments,DC=enron,DC=com",Richard.Shapiro@enron.com,,,Legal
+Rick Buy,Rick,Buy,Rick.Buy,713.853.4739,Managers,"OU=Managers,OU=Departments,DC=enron,DC=com",Rick.Buy@enron.com,,,Risk Management Officer
+Robert Badeer,Robert,Badeer,Robert.Badeer,503.464.3926,Portland,"OU=Portland,OU=Departments,DC=enron,DC=com",Robert.Badeer@enron.com,,,Portland
+Robin Rodrigue,Robin,Rodrigue,Robin.Rodrigue,713.345.7478,Analysts,"OU=Analysts,OU=Departments,DC=enron,DC=com",Robin.Rodrigue@enron.com,,,Analyst Risk Management Reporting
+Rosalee Fleming,Rosalee,Fleming,Rosalee.Fleming,713.853.6088,Admins,"OU=Admins,OU=Departments,DC=enron,DC=com",Rosalee.Fleming@enron.com,,,Assistant to Ken Lay
+Ryan Slinger,Ryan,Slinger,Ryan.Slinger,503.464.3835,Portland,"OU=Portland,OU=Departments,DC=enron,DC=com",Ryan.Slinger@enron.com,,,Portland
+Sally Beck,Sally,Beck,Sally.Beck,713.853.5926,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Sally.Beck@enron.com,,,VP Enron ENA
+Sandra Brawner,Sandra,Brawner,Sandra.Brawner,713.853.4854,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Sandra.Brawner@enron.com,,,Director
+Sara Shackleton,Sara,Shackleton,Sara.Shackleton,713.853.5620,Legal,"OU=Legal,OU=Departments,DC=enron,DC=com",Sara.Shackleton@enron.com,,,Enron Wholesale Services
+Scott Neal,Scott,Neal,Scott.Neal,713.853.4723,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Scott.Neal@enron.com,,,Trader
+Shelley Corman,Shelley,Corman,Shelley.Corman,713.853.7083,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Shelley.Corman@enron.com,,,VP Gas Logistics
+Sherri Reinartz-Sera,Sherri,Reinartz-Sera,Sherri.Reinartz-Sera,713.853.5984,Admins,"OU=Admins,OU=Departments,DC=enron,DC=com",Sherri.Reinartz-Sera@enron.com,,,Assistant to Jeff Skilling
+Stacey White,Stacey,White,Stacey.White,713.853.1870,Managers,"OU=Managers,OU=Departments,DC=enron,DC=com",Stacey.White@enron.com,,,Manager
+Stacy Dickson,Stacy,Dickson,Stacy.Dickson,713.853.5705,Legal,"OU=Legal,OU=Departments,DC=enron,DC=com",Stacy.Dickson@enron.com,,,Legal
+Stephanie Panus,Stephanie,Panus,Stephanie.Panus,713.345.3249,Legal,"OU=Legal,OU=Departments,DC=enron,DC=com",Stephanie.Panus@enron.com,,,Senior Legal Specialist
+Steven Harris,Steven,Harris,Steven.Harris,713.853.1796,HR,"OU=HR,OU=Departments,DC=enron,DC=com",Steven.Harris@enron.com,,,Human Resources Specialist
+Steven Merriss,Steven,Merriss,Steven.Merriss,503.880.5302,Portland,"OU=Portland,OU=Departments,DC=enron,DC=com",Steven.Merriss@enron.com,,,Portland Real Time Trader
+Susan Bailey,Susan,Bailey,Susan.Bailey,713.853.4737,Legal,"OU=Legal,OU=Departments,DC=enron,DC=com",Susan.Bailey@enron.com,,,Legal Enron Wholesale Services
+Susan Pereira,Susan,Pereira,Susan.Pereira,713.853.3229,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Susan.Pereira@enron.com,,,Trader
+Teb Lokey,Teb,Lokey,Teb.Lokey,713.853.6868,Analysts,"OU=Analysts,OU=Departments,DC=enron,DC=com",Teb.Lokey@enron.com,,,Analyst Electric Compression
+Theresa Staab,Theresa,Staab,Theresa.Staab,303.575.6485,Denver,"OU=Denver,OU=Departments,DC=enron,DC=com",Theresa.Staab@enron.com,,,"Enron North America Denver, CO. office"
+Thomas Martin,Thomas,Martin,Thomas.Martin,713.853.3079,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Thomas.Martin@enron.com,,,Vice President
+Tom Donohoe,Tom,Donohoe,Tom.Donohoe,713.853.7151,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Tom.Donohoe@enron.com,,,Trader
+Tori Kuykendall,Tori,Kuykendall,Tori.Kuykendall,713.853.3275,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Tori.Kuykendall@enron.com,,,Trader
+Tori Wells,Tori,Wells,Tori.Wells,713.853.5769,Admins,"OU=Admins,OU=Departments,DC=enron,DC=com",Tori.Wells@enron.com,,,Assistant to Ken Lay
+Tracy Geaccone,Tracy,Geaccone,Tracy.Geaccone,713.853.7372,Finance,"OU=Finance,OU=Departments,DC=enron,DC=com",Tracy.Geaccone@enron.com,,,Finance
+Vladi Pimenov,Vladi,Pimenov,Vladi.Pimenov,713.853.7625,Analysts,"OU=Analysts,OU=Departments,DC=enron,DC=com",Vladi.Pimenov@enron.com,,,Analyst
+Bill Williams,Bill,Williams,Bill.Williams,503.464.3730,Portland,"OU=Portland,OU=Departments,DC=enron,DC=com",Bill.Williams@enron.com,,,Manager (trading)
+Carol StClair,Carol,StClair,Carol.StClair,713.853.3989,Legal,"OU=Legal,OU=Departments,DC=enron,DC=com",Carol.StClair@enron.com,,,Attourney
+Darron Giron,Darron,Giron,Darron.Giron,713.853.9573,Analysts,"OU=Analysts,OU=Departments,DC=enron,DC=com",Darron.Giron@enron.com,,,Risk Analyst
+Errol Mclaughlin,Errol,Mclaughlin,Errol.Mclaughlin,713.345.8274,Analysts,"OU=Analysts,OU=Departments,DC=enron,DC=com",Errol.Mclaughlin@enron.com,,,Lead - Financial Trading Risk Mgmt
+Geoffery Storey,Geoffery,Storey,Geoffery.Storey,713.853.7058,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Geoffery.Storey@enron.com,,,Trader
+Jeffrey Shankman,Jeffrey,Shankman,Jeffrey.Shankman,713.853.1761,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Jeffrey.Shankman@enron.com,,,President Enron Global Mkts
+Paul Y'barbo,Paul,Y'barbo,Paul.Y'barbo,713.345.4173,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Paul.Y'barbo@enron.com,,,Director LNG
+Phillip Love,Phillip,Love,Phillip.Love,713.853.7376,Analysts,"OU=Analysts,OU=Departments,DC=enron,DC=com",Phillip.Love@enron.com,,,Analyst
+Randall Gay,Randall,Gay,Randall.Gay,713.853.1991,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Randall.Gay@enron.com,,,Trader
+Steven South,Steven,South,Steven.South,713.853.6798,Traders,"OU=Traders,OU=Departments,DC=enron,DC=com",Steven.South@enron.com,,,Trader
+Vince Kaminski,Vince,Kaminski,Vince.Kaminski,713.853.3848,Executive,"OU=Executive,OU=Departments,DC=enron,DC=com",Vince.Kaminski@enron.com,,,Risk Management Director

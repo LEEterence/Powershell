@@ -1,0 +1,3 @@
+# Out-file using code: $firstrow | select -ExpandProperty name | Out-File .\test.txt
+
+Albert Meyers

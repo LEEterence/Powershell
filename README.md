@@ -9,3 +9,11 @@ Server Types (WIP)
  - WDS 
  - Hyper-V
 
+Capstone Todos
+ - More Testing:
+    Add-Group ps1
+    Add-OU ps1
+ - Scripts to create/modify
+    Add to domain
+    Child domain
+ - Backup GPOs (for transporting them)

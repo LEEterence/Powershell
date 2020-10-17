@@ -1,0 +1,5 @@
+# Out-file using code: $firstrow | select -Property name | Out-File .\test2.txt
+Name
+----
+Albert Meyers
+

@@ -1,6 +1,8 @@
 <# 
 ~ Remote scripting examples and information
 
+! REMINDER: IF NOT DOMAIN-JOINED ENABLE-PSREMOTING WON'T work. Must use HTTPS transport or add target, remote machine to TrustedHost Settings using WINRM
+! Whenever using a SCRIPTBLOCK keep in mind I will likely have to use 'This' $_ or ArgumentList or $Using:
 #>
 # Local Variables
 $folderLocation = "C:\testfolder"
