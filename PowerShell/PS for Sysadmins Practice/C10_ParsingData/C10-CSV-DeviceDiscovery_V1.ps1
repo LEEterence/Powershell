@@ -5,8 +5,8 @@ $csv = Import-Csv -path .\IPAddresses.csv
 #(Resolve-DnsName -Name $csv[0].IPAddress -ErrorAction Stop).Name
 
 #@ Using foreach to iterate through each 
-#$csv.foreach({
-#    test-connection $_.IPAddress -Quiet -Count 1
-#    (Resolve-DnsName $_.IPAddress -ErrorAction Stop).Namehost
-#})
+$csv.foreach({
+    test-connection $_.IPAddress -Quiet -Count 1
+    (Resolve-DnsName $_.IPAddress -ErrorAction Stop).Namehost
+})
 
