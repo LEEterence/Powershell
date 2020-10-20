@@ -1,5 +1,6 @@
 <# 
-~ Code will be integrated with Add-aduser scripts
+~ Create groups based on CSV file
+Code may be integrated with Add-aduser scripts
 #>
 Import-Module ActiveDirectory 
 
@@ -18,7 +19,6 @@ $ADGroups.foreach
 
     if ($GroupCheck -eq $True){
         try {
-
             Write-Warning "A group with the name of $Name already exist in Active Directory."
         }
         catch {
@@ -30,11 +30,9 @@ $ADGroups.foreach
                 -Path $Path `
             
             Write-Host "Group $Displayname created at $Path"
-
             # -GroupScope "Global/Domain Local/Universal" 
             # -GroupCategory "Security/Distribution" 
         }
-
     }else {
         
     }
