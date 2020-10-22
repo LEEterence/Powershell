@@ -15,7 +15,7 @@ Function Get-ADEmployeeFromCSV {
     param(
         # Importing CSV - adjust location as required
         [Parameter(Mandatory = $false)]
-        [string] $FileLocation,
+        [string] $FileLocation = "C:\employee2.csv",
         
         # Hashtable to change CSV headers to corresponding AD attributes
         [Parameter(Mandatory = $false)]
@@ -34,12 +34,13 @@ Function Get-ADEmployeeFromCSV {
                 Name = $_.Value
                 # Creates a scriptblock that can be stored in a variable, in this scenario we are storing how the calculated property's value is being generated.
                 # IE. in this scenario the key of each row in the $syncfieldmap will be used to generate actual values from the CSV. Data rows will be empty until CSV values are fed in
-                Expression = [scriptblock]::Create($_.Key)
+                Expression = [scriptblock]::Create("`$_.$($_.Key)")
             }
         }
         $uniqueIdProperty = '"{0}{1}" -f '
         $uniqueIdProperty = $uniqueIdProperty += 
         ($FieldMatchIds.CSV | ForEach-Object { '$_.{0}' -f $_ }) –join ','
+        
         $properties += @{
             Name = 'UniqueID'
             Expression = [scriptblock]::Create($uniqueIdProperty)
@@ -53,7 +54,7 @@ Function Get-ADEmployeeFromCSV {
     #Get-ADUser -Filter "GivenName -eq '$SyncParameters.givenname' -and Surname -eq '$SyncParameters.SurName'"
 }
 # Mapping CSV headers with corresponding AD parameters
-$syncFieldMap = @{   
+<# $syncFieldMap = @{   
     fname = 'GivenName'
     lname = 'Surname'   
     dept = 'Department'
@@ -64,9 +65,11 @@ $fieldMatchIds = @{
     AD = @('givenName','surName')
     CSV = @('fname','lname')
 }
+ #>
+
+#Get-ADEmployeeFromCSV -SyncFieldMap $syncFieldMap -fieldMatchIds $fieldMatchIds
 
 
-Get-ADEmployeeFromCSV -SyncFieldMap $syncFieldMap -fieldMatchIds $fieldMatchIds
 ## Creating my own script block (prevent having to re-enter code)
 ## Source: https://lazywinadmin.com/2017/03/ScriptBlockObject.html
 #$NewScriptBlock = [scriptblock]::Create("Get-ChildItem Join-Path $env:USERPROFILE '\Desktop'")
