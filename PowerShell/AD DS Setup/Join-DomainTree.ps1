@@ -4,6 +4,7 @@
 $DomainName = Read-Host "Enter full domain name (ie. example.com)"        #Ex) terence.local
 $DomainNetBios = Read-Host "Enter domain net bios value (ie. EXAMPLE)"     #Ex) TERENCE
 $ForestRootDomain = Read-Host "Enter the forest root domain"
+$Site = Read-Host "Enter the Site"
 $DSRM = ConvertTo-SecureString "Password1" -AsPlainText -Force
 
 Install-WindowsFeature –Name AD-Domain-Services -IncludeManagementTools
@@ -22,7 +23,8 @@ Install-ADDSDomain `
     -NewDomainNetbiosName $DomainNetBios `
     -ParentDomainName $ForestRootDomain `
     -NoRebootOnCompletion:$false `
-    -SiteName "Default-First-Site-Name" `
+    -SiteName $Site `
+    #-SiteName "Default-First-Site-Name" `
     -SysvolPath "C:\Windows\SYSVOL" `
     -SafeModeAdministratorPassword $DSRM `
     -Force:$true
