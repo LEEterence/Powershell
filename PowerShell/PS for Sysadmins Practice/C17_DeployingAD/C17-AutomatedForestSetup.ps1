@@ -52,14 +52,20 @@ function New-ActiveDirectoryForest{
     }
 }
 
-<# Example Execution #>
+<# 
+@ Example Execution @
+
+#>
 #$safeModePw = Import-CliXml -Path C:\PowerLab\SafeModeAdministratorPassword.xml
 #$cred = Import-CliXml -Path C:\PowerLab\VMCredential.xml
     # NOTE this contains admin password of local computer
 #New-PowerLabActiveDirectoryForest -Credential $cred -SafeModePassword $safeModePw
 
-# Verification
-# Prompt myself for creds then export - this should be a domain admin account
+<# 
+@ Verification @
+  Prompt myself for creds then export - 
+  ! this should be a domain admin account b/c once the Forest has been installed the admin account of the forest is required to query it
+#>
 #Get-Credential | Export-CliXml -Path C:\PowerLab\DomainCredential.xml
 function Test-PowerLabActiveDirectoryForest {
     param(
@@ -72,6 +78,8 @@ function Test-PowerLabActiveDirectoryForest {
 
     Invoke-Command -Credential $Credential -ScriptBlock {Get-AdUser -Filter * }
 }
-<# Example Execution #>
+<# 
+@ Example Execution 
+#>
 #$domaincred = Import-CliXml -Path C:\PowerLab\DomainCredential.xml
 #New-PowerLabActiveDirectoryForest -Credential $domaincred 
