@@ -38,7 +38,6 @@ function NewUser{
         $Domain = Get-ADDomain | Select-Object -ExpandProperty Forest
         # First try to create username
         $num = 1
-
         $username = "{0}.{1}$num" -f $FirstName,$LastName
 
         # Verifying if the username has been taken
