@@ -18,12 +18,13 @@ $Filelocation = "C:\Users\Administrator\Desktop\SleepyGeeks Departments.csv"  # 
 $OUs = Import-csv $Filelocation
 
 foreach($ou in $OUs){
-    $Users = Get-ADUser -Filter * -SearchBase "ou=$($ou.Name),$($ou.Path)" -SearchScope OneLevel | Select-Object samaccountname
-    if ($null -eq $Users){
-        Write-Host "$($ou.Name) has no members, skipping..." -ForegroundColor DarkMagenta
+    $groups = Get-ADGroup -Filter * -SearchBase "ou=$($ou.Name),$($ou.Path)" -SearchScope OneLevel| Select-Object samaccountname
+
+    if ($null -eq $groups){
+        Write-Host "$($ou.Name) has no groups, skipping..."
     }elseif(-not($null -eq $Users)){
-        write-host "$($ou.Name) has members" -ForegroundColor Green
-        $groups = Get-ADGroup -Filter * -SearchBase "ou=$($ou.Name),$($ou.Path)" -SearchScope OneLevel| Select-Object samaccountname
+        write-host "$($ou.Name) group has members" 
+        $Users = Get-ADUser -Filter * -SearchBase "ou=$($ou.Name),$($ou.Path)" -SearchScope OneLevel | Select-Object samaccountname
 
         # Random add to group, $count is an arraylist containing the number of members in each group in the csv
         foreach ($user in $users){
@@ -35,7 +36,7 @@ foreach($ou in $OUs){
             } 
             # Once count of group members has completed - sort by the members which automatically goes least to greatest. Grab the first value (the lowest) and obtain only the 'Group' parameter. Then add the current user from $ADusers to the group
             $FewestGroupUsercount = $($count | Sort-Object Members | Select-Object -First 1).Group
-            $null = Add-ADGroupMember -Identity $FewestGroupUsercount.Name -Members $user.samaccountname 
+            $null = Add-ADGroupMember -Identity $FewestGroupUsercount.samaccountname -Members $user.samaccountname 
             Write-Host "[$($user.samaccountname)] added to the group [$FewestGroupUsercount]" -ForegroundColor Green
         }
     }

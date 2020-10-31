@@ -1,9 +1,9 @@
 <# 
 ~ Script to add multiple OUs
 
-@ NOTE: remember to add parent OUs at the very top
+@ Author: Terence Lee
 #>
-
+# NOTE: add parent OUs at the top
 $FileLocation = "C:\Users\Administrator\Desktop\SleepyGeeks Departments.csv"
 
 $OUPath = Import-Csv $FileLocation

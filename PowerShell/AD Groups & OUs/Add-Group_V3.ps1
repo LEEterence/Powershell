@@ -1,19 +1,20 @@
 <# 
-~ Code will be integrated with Add-aduser scripts
+~ Script to add groups to domain
+
+@ Author: Terence Lee
 #>
-
-#Add-ADGroupMember -Name "Group Name" -Members "New/Existing User"
-
 $FileLocation = "C:\Users\Administrator\Desktop\SleepyGroups.csv"
 
 $GroupPath = Import-Csv $FileLocation
 
 foreach($group in $GroupPath){
     try{
+        # Verify if group already exists
         $CheckGroup = Get-ADGroup -Filter "SamAccountName -eq '$($group.SamAccountName)'" #-SearchBase $ou.Path
         if (-not($null -eq $CheckGroup)){
             Write-Host "$($group.Name) already exists. Skipping." -ForegroundColor DarkMagenta
         }else{
+            # Execute group add, based on CSV
             New-ADGroup `
                 -Name $group.Name `
                 -DisplayName $group.Displayname `
@@ -22,7 +23,7 @@ foreach($group in $GroupPath){
                 -GroupCategory $group.GroupCategory `
                 -Whatif
             
-                Write-Verbose "[$($group.Name)] created successfully in $($Group.path)." 
+                Write-Host "[$($group.Name)] created successfully in $($Group.path)." 
         }
     }
     catch{

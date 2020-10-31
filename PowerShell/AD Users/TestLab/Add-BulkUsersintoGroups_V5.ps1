@@ -14,16 +14,17 @@ From a csv of OUs:
 Changes: cleaned up code
 #>
 
-$Filelocation = "C:\Users\Administrator\Desktop\SleepyGeeks Departments.csv"  # Ex) C:\Users\Administrators\desktop\bulk_users.csv
+$Filelocation = "C:\ALL SJ SCRIPTS\SoftwareJuice Departments.csv"  # Ex) C:\Users\Administrators\desktop\bulk_users.csv
 $OUs = Import-csv $Filelocation
 
 foreach($ou in $OUs){
+    $groups = Get-ADGroup -Filter * -SearchBase "ou=$($ou.Name),$($ou.Path)" -SearchScope OneLevel| Select-Object samaccountname
     $Users = Get-ADUser -Filter * -SearchBase "ou=$($ou.Name),$($ou.Path)" -SearchScope OneLevel | Select-Object samaccountname
-    if ($null -eq $Users){
-        Write-Host "$($ou.Name) has no members, skipping..." -ForegroundColor DarkMagenta
+
+    if ($null -eq $groups){
+        Write-Host "$($ou.Name) has no groups, skipping..." -ForegroundColor Magenta
     }elseif(-not($null -eq $Users)){
-        write-host "$($ou.Name) has members" -ForegroundColor Green
-        $groups = Get-ADGroup -Filter * -SearchBase "ou=$($ou.Name),$($ou.Path)" -SearchScope OneLevel| Select-Object samaccountname
+        write-host "$($ou.Name) group has members" -ForegroundColor Green
 
         # Random add to group, $count is an arraylist containing the number of members in each group in the csv
         foreach ($user in $users){
@@ -35,7 +36,7 @@ foreach($ou in $OUs){
             } 
             # Once count of group members has completed - sort by the members which automatically goes least to greatest. Grab the first value (the lowest) and obtain only the 'Group' parameter. Then add the current user from $ADusers to the group
             $FewestGroupUsercount = $($count | Sort-Object Members | Select-Object -First 1).Group
-            $null = Add-ADGroupMember -Identity $FewestGroupUsercount.Name -Members $user.samaccountname 
+            $null = Add-ADGroupMember -Identity $FewestGroupUsercount.samaccountname -Members $user.samaccountname -WhatIf
             Write-Host "[$($user.samaccountname)] added to the group [$FewestGroupUsercount]" -ForegroundColor Green
         }
     }
