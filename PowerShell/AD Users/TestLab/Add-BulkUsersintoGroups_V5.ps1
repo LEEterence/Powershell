@@ -14,6 +14,21 @@ From a csv of OUs:
 Changes: cleaned up code
 #>
 
+function New-BulkGroups {
+    [CmdletBinding()]
+    param (
+        [parameter(Mandatory = $true)]
+        [String]
+        $FileLocation
+    )
+    if (-not($CheckExists -eq $true)){
+        Write-Host "CSV at this location doesn't exist" -ForegroundColor Red
+    }else {
+
+    }
+}
+
+
 $Filelocation = "C:\ALL SJ SCRIPTS\SoftwareJuice Departments.csv"  # Ex) C:\Users\Administrators\desktop\bulk_users.csv
 $OUs = Import-csv $Filelocation
 

@@ -24,6 +24,7 @@ Uninstall-Module -Name PowerShellGet
 # Create Folder within one of the Default Module Paths (in this case - All users)
 mkdir 'C:\Program Files\WindowsPowerShell\Modules\Software'
 # create a .psm1
+new-item  "E:\_Git\Powershell\PowerShell\AD Users\New-ADTestLab\New-ADTestLab.psm1"
 Add-Content 'C:\Program Files\WindowsPowerShell\Modules\Software\Software.psm1'
 # create a .psd1
 New-ModuleManifest -Path 'C:\Program Files\WindowsPowerShell\Modules\Software\Software.psd1' `

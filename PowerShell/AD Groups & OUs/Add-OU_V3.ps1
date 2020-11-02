@@ -15,7 +15,7 @@ foreach($ou in $OUPath){
         }else {
             New-ADOrganizationalUnit `
                 -Name $ou.Name `
-                -DisplayName $ou.Displayname `
+                -DisplayName $ou.Name `
                 -Path $ou.path `
                 -ProtectedFromAccidentalDeletion $false
             Write-Host "$($ou.Name) at the path $($ou.path) added successfully." -ForegroundColor Green
