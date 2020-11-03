@@ -38,7 +38,6 @@ Order of Deployment:
     4. Add-BulkUsersToGroup'
 
 # Minimum version of the PowerShell engine required by this module
-PowerShellVersion = '7.0.3'
 
 # Name of the PowerShell host required by this module
 # PowerShellHostName = ''
