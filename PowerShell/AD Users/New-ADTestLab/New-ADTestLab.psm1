@@ -132,7 +132,6 @@ function New-BulkUsers{
     
             # Sort OUs from most to least members and select the OU with the least members to be the path
             # NOTE: searchbase leads to a very specific OU naming structure
-            $OUs = Get-ADOrganizationalUnit -Filter * -SearchBase "ou=$($WorkSheetName) users,ou=Department Users,$DN" -Properties Name  -SearchScope OneLevel| Select-Object -ExpandProperty DistinguishedName
     
             If ($WorkSheetName -eq 'London Design'){
                 $FewestOUCount = "OU=London Design,OU=London Users,OU=Department Users,DC=softwarejuice,DC=com"
@@ -141,6 +140,8 @@ function New-BulkUsers{
                 $FewestOUCount = "OU=London Sales,OU=London Users,OU=Department Users,DC=softwarejuice,DC=com"            
             }
             else{
+                $OUs = Get-ADOrganizationalUnit -Filter * -SearchBase "ou=$($WorkSheetName) users,ou=Department Users,$DN" -Properties Name  -SearchScope OneLevel| Select-Object -ExpandProperty DistinguishedName
+
                 $OUMemberCount = [System.Collections.ArrayList]@()
 
                 ForEach($OU in $OUs){
@@ -244,7 +245,7 @@ function New-BulkUsers{
                 #User does not exist then proceed to create the new user account
                 #Account will be created in the OU provided by the $OU variable read from the CSV file
                 New-ADUser @NewUserParam 
-                Write-Host "New User $SamAccountName added to $FewestOUCount"
+                Write-Host "New User $SamAccountName added to $FewestOUCount" -ForegroundColor Green
             }
         })
     }
