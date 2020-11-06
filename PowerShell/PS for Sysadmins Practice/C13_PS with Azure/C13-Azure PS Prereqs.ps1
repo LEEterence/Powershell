@@ -19,7 +19,7 @@ Import-Module Az
     # Creating service account to automate authentication
     # NOTE: MUST be global admin of the subscription (Azure for Students doesn't give global admin)
     $securepass = ConvertTo-SecureString -AsPlainText -Force -string "Password1"
-    $myApp = New-AzADApplication -DisplayName AppForServicePrincipal -IdentifierUris 'http://chapter13.com' -Password $securepass
+    $myApp = New-AzADApplication -DisplayName AppForServicePrincipal -IdentifierUris 'http://appforserviceprincipal' -Password $securepass
         # IdentifierURLs is custom specified
 
     # Create the new service principal. NOTE: it may already assign 'contributor' role already (so the next step isn't necessary)

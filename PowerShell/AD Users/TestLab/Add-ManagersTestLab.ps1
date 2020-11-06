@@ -44,9 +44,9 @@ function Add-BulkUsers{
     # Obtain Domain
     $Domain = Get-ADDomain | Select-Object -ExpandProperty Forest
     # Obtain dc of distinguishedname to change domains 
-    $DC = (Get-ADDomain).Name
-    # Grabbing full DN
-    $DN = (Get-ADDomain).distinguishedname
+    #$DC = (Get-ADDomain).Name
+    ## Grabbing full DN
+    #$DN = (Get-ADDomain).distinguishedname
 
     # First try to create username
     $num = 1
@@ -139,7 +139,7 @@ function Add-BulkUsers{
         postalcode              = $_.ZipCode
         country                 = $_.Country
         # Not sure what to do with group
-        #memberof               = 
+        memberof                = $_.memberof
 		SamAccountName 		    = $SamAccountName
 		OfficePhone			    = $_.TelephoneNumber
 		Department			    = $Department
