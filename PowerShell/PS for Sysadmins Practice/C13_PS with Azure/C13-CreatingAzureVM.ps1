@@ -9,13 +9,13 @@
 
 #>
 
-# 1. Resource Group
+# 1. Resource Group #########################################
     # Find locations
     Get-AzLocation
     # Create new resource group and set its location
     New-AzResourceGroup -Name 'PowerShellForSysAdmins-RG' -Location 'East US'
 
-# 2. Creating Virtual Stack
+# 2. Creating Virtual Stack #########################################
     # Subnet: New-AzVirtualNetworkSubnetConfig
     $newSubnetParams = @{
         'Name' = 'PowerShellForSysAdmins-Subnet'
@@ -48,7 +48,7 @@
     }
     $vNic = New-AzNetworkInterface @newVNicParams
 
-# 3. Storage Account
+# 3. Storage Account #########################################
     # Create storage to store VMs
     $newStorageAcctParams = @{
         # ! NOTE: 'Name' MUST BE UNIQUE IN ALLLL OF AZURE - cannot be unique with just my resourcegroups, subscriptions, etc.
@@ -59,13 +59,13 @@
     }
     $storageAccount = New-AzStorageAccount @newStorageAcctParams
 
-# 4. Creating the OS Image
+# 4. Creating the OS Image #########################################
     # Obtain all vm sizes
     Get-AzVMSize -Location 'East US'
     # Defining OS Configuration Settings: New-AzVMConfig
     $newConfigParams = @{
         'VMName' = 'PowerShellForSysAdmins-VM'
-        'VMSize' = 'Standard_B1ms'
+        'VMSize' = 'Standard_B2s'
     }
         # @ CHECK IF VM SIZE IS AVAILABLE!! ###########
         Get-AzComputeResourceSku | Where-Object {$_.Locations -icontains "eastus" -and $_.ResourceType.Contains("virtualMachines")}
@@ -89,6 +89,9 @@
         # RESULT: all offers by the publisher (shows all Windows Server versions)
     # Find all SKUs
     Get-AzVMImageSku -Location "East US" -PublisherName "MicrosoftWindowsServer" -Offer "Windowsserver" 
+    # Find SKUs availble to that location, note the "NotAvailableForSubscription"
+    Get-AzComputeResourceSku | Where-Object {$_.Locations -icontains "westus"}
+    Get-AzComputeResourceSku | Where-Object {$_.Locations.Contains("westus") -and $_.ResourceType.Contains("virtualMachines") -and $_.Name.Contains("v3")} | Format-Custom
     # Find all versions of SKU
     Get-AzVMImage -Location "East US" -PublisherName "MicrosoftWindowsServer" -Offer "windowsserver" -Skus "2016-Datacenter"
     # @ Source: https://docs.microsoft.com/en-us/azure/virtual-machines/windows/cli-ps-findimage
