@@ -29,7 +29,7 @@ if (Test-Path $TestFilePath) {
 
     $PSPath = Join-Path $env:windir "system32\WindowsPowerShell\v1.0\powershell.exe"
     #@ REMEMBER TO CHANGE THIS #############################
-    $schAction = New-ScheduledTaskAction -Execute $PSPath -Argument '-NoProfile  -Executionpolicy bypass -WindowStyle Hidden -File "C:\Users\Administrator\Desktop\Setup-AD.ps1"'
+    $schAction = New-ScheduledTaskAction -Execute $PSPath -Argument '-NoProfile  -Executionpolicy Unrestricted -WindowStyle Hidden -File "C:\Users\Administrator\Desktop\Setup-AD.ps1"'
     $schTrigger = New-ScheduledTaskTrigger -AtLogOn
     $schPrincipal = New-ScheduledTaskPrincipal -UserId "NT AUTHORITY\SYSTEM" -LogonType ServiceAccount -RunLevel Highest
     $schOption = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -WakeToRun
