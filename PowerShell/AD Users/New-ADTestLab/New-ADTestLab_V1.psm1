@@ -75,6 +75,15 @@ function New-BulkGroups {
     }
 }
 function New-BulkUsers{
+    <# 
+    .Description
+    This file to imports users based on existing OUs
+
+    .EXAMPLE
+    Add-BulkUsers -FileLocation "C:\Users\Administrator\Desktop\Full User Sheet.xlsx" -WorkSheetName Toronto
+    Running based on users with Toronto WorkSheet 
+
+    #>
     [cmdletbinding()]
     param(
         [parameter(Mandatory = $true)]
@@ -105,6 +114,8 @@ function New-BulkUsers{
         $ADusers.foreach({
             # Obtain Domain
             $Domain = Get-ADDomain | Select-Object -ExpandProperty Forest
+            # Obtain dc of distinguishedname to change domains 
+            $DC = (Get-ADDomain).Name
             # Grabbing full DN
             $DN = (Get-ADDomain).distinguishedname
     
@@ -197,7 +208,9 @@ function New-BulkUsers{
                 Surname 			    = $_.Surname
                 Initials                = $_.MiddleInitial
                 DisplayName             = $_.GivenName + ' ' + $_.Surname
+                # Might description in the future
                 Description             = "$Department User"
+                # Might change office in the future
                 office                  = "$Department Office"
                 EmailAddress            = $SamAccountName + '@' + $Domain
                 StreetAddress           = $_.StreetAddress
@@ -205,6 +218,8 @@ function New-BulkUsers{
                 state                   = $_.Statefull
                 postalcode              = $_.ZipCode
                 country                 = $_.Country
+                # Not Implemented - 
+                #memberof               = 
                 SamAccountName 		    = $SamAccountName
                 OfficePhone			    = $_.TelephoneNumber
                 Department			    = $Department
@@ -213,6 +228,8 @@ function New-BulkUsers{
                 EmployeeID              = $EmployeeID
                 Company                 = $Company
                 Title                   = "$Department $Title" 
+                # Might have to implement manager AFTERWARDS
+                #Manager                = 
                 Enabled                 = $true
                 ChangePasswordAtLogon   = $false
             }
